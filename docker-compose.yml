@@ -1,13 +1,13 @@
 version: '3.7'
 services:
-  mysql:
-    image: mysql:8.0
+  DB:
+    image: postgres:12-alpine
     ports:
-      - '3306:3306'
+      - '5432:5432'
+    restart: always
     volumes:
-      - ./data:/var/lib/mysql
+      - ./data:/var/lib/postgres
     environment:
-      - MYSQL_RANDOM_ROOT_PASSWORD=yes
-      - MYSQL_DATABASE=app
-      - MYSQL_USER=app
-      - MYSQL_PASSWORD=9mREsvXDs9Gk89Ef
+      POSTGRES_DB: database
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
