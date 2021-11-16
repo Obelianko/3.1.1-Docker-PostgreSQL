@@ -9,5 +9,8 @@ services:
       - ./data:/var/lib/postgres
     environment:
       POSTGRES_DB: database
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
+      POSTGRES_USER: student
+      POSTGRES_PASSWORD: netologystudent
+
+
+
